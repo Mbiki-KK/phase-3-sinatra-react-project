@@ -29,23 +29,13 @@ class ApplicationController < Sinatra::Base
     end
   end
 
-
-  put "contacts/:id" do
-    contacts=Contact.find(params[:id])
-    contacts.update(
-      name: params[:name],
-      email: params[:email],
-      phone: params[:phone],
-      location: params[:location],
-      status: params[:status],
-      relation: params[:relation],
-    )
-
-    contacts.to_json
+  delete '/contacts/:id' do
+    contact = Contact.find(params[:id])
+    if contact.destroy
+      status 204
+    else
+      status 500
+    end
   end
 
-  delete "/contacts/:id" do
-    contacts=Contact.find(params[:id])
-    contacts.destroy
-  end
 end
