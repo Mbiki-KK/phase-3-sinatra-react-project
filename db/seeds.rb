@@ -6,7 +6,7 @@ puts "🌱 Seeding spices..."
 
 
 # Seed contacts
-10.times do
+50.times do
   Contact.create(
     name: Faker::Name.name,
     email: Faker::Internet.email,
