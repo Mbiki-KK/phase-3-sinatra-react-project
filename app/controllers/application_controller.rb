@@ -8,6 +8,12 @@ class ApplicationController < Sinatra::Base
     contacts=Contact.all
     contacts.to_json
   end
+
+  get "/contacts/:id" do
+    contacts=Contact.find(params[:id])
+
+    contacts.to_json
+  end
   post "/contacts" do
     Contact.create(
       name: params[:name],
@@ -40,11 +46,7 @@ class ApplicationController < Sinatra::Base
 
   delete '/contacts/:id' do
     contact = Contact.find(params[:id])
-    if contact.destroy
-      status 204
-    else
-      status 500
-    end
+     contact.destroy
   end
 
 end
