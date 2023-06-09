@@ -1,6 +1,6 @@
 # Backend README
 
-This README provides an overview of the backend of the Contact Management App. It describes the three models used in the application (Contacts, Relationship, and User) and provides instructions for setting up the Contacts table and presenting the data to the frontend.
+This README provides an overview of the backend of the Address Book App. It describes the three models used in the application (Contacts, Relationship, and User) and provides instructions for setting up the Contacts table and presenting the data to the frontend.
 
 ## Models
 
@@ -25,7 +25,7 @@ The Relationship model represents the relationship of a contact with the user an
 
 ### User Model
 
-The User model represents a user of the Contact Management App and stores the following information:
+The User model represents a user of The Address Book App and stores the following information:
 
 - `id`: Unique identifier for the user.
 - `username`: Username of the user.
