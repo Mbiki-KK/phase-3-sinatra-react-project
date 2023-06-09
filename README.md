@@ -42,3 +42,9 @@ To set up the Contacts table in the database, follow these steps:
 
    ```shell
    $ rails db:migrate
+
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/Mbiki-KK/address-book-project.git
